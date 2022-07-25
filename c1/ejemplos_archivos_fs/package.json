@@ -1,0 +1,11 @@
+{
+  "name": "ejemplos_archivos_fs",
+  "version": "1.0.0",
+  "description": "Trabajando con FS (FileSystem)",
+  "main": "files_fs.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "David Navarrete",
+  "license": "ISC"
+}
