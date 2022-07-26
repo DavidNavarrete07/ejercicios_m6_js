@@ -1,0 +1,11 @@
+{
+  "name": "ejercicio_frases_simpsons",
+  "version": "1.0.0",
+  "description": "Realizando ejercicio de frases de los simpsons",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "David Navarrete",
+  "license": "ISC"
+}
