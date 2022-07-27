@@ -1,0 +1,15 @@
+{
+  "dependencies": {
+    "axios": "^0.27.2"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "servidor_divisa",
+  "version": "1.0.0",
+  "main": "server.js",
+  "devDependencies": {},
+  "author": "David Navarrete",
+  "license": "ISC",
+  "description": ""
+}
