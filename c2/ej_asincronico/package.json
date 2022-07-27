@@ -1,0 +1,14 @@
+{
+  "name": "ej_asincronico",
+  "version": "1.0.0",
+  "description": "Ejercicio asincronico de la clase 2 del modulo 6",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "David Navarrete",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.27.2"
+  }
+}
