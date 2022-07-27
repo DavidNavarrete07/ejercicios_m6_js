@@ -1,0 +1,14 @@
+{
+  "name": "servidor_american_connection",
+  "version": "1.0.0",
+  "description": "Resolviendo ejercicio asincronico de la clase 3",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "David Navarrete",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}

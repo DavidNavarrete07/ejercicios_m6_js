@@ -15,7 +15,7 @@ const port = 3000
 const server = http.createServer(async (req, res) => {
 
     res.statusCode = 200
-    res.setHeader('Content-Type', 'text/html')
+    res.setHeader('Content-Type', 'text/html; charset=utf-8')
 
     let respuesta;
 
