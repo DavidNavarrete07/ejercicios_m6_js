@@ -1,0 +1,15 @@
+{
+  "name": "ej_black_and_white",
+  "version": "1.0.0",
+  "description": "Ejercicio asincrónico de la clase 5 - trabajando con la librería jimp",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "David Navarrete",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1",
+    "jimp": "^0.16.1"
+  }
+}
