@@ -1,0 +1,15 @@
+{
+  "name": "servidor_american_connection_ajax",
+  "version": "1.0.0",
+  "description": "Manejando formularios con ExpressJS y AJAX",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "David Navarrete",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1",
+    "moment": "^2.29.4"
+  }
+}
