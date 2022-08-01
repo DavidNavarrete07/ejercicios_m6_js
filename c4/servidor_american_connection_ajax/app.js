@@ -76,16 +76,20 @@ app.get('/rename', async (req, res) => {
 
 app.get('/delete', async (req, res) => {
   const fileNameDelete = req.query.fileNameDelete;
-  try {
-    await fs.access('public/documents/' + fileNameDelete + '.txt');
-    await fs.unlink('public/documents/' + fileNameDelete + '.txt');
-    res.send(`El archivo ${fileNameDelete}.txt se ha eliminado!`);
-  } catch (error) {
-    if (error.code === 'ENOENT') {
-      res.send('El archivo no existe');
-    } else {
-      res.send('Error: ' + error);
+  if(fileNameDelete != null){
+    try {
+      await fs.access('public/documents/' + fileNameDelete + '.txt');
+      await fs.unlink('public/documents/' + fileNameDelete + '.txt');
+      res.send(`El archivo ${fileNameDelete}.txt se ha eliminado!`);
+    } catch (error) {
+      if (error.code === 'ENOENT') {
+        res.send('El archivo no existe');
+      } else {
+        res.send('Error: ' + error);
+      }
     }
+  }else{
+    res.send('Ingrese los datos');
   }
 });
 
