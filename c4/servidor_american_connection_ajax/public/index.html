@@ -45,14 +45,14 @@
             <!-- Renombrar archivo -->
             <div class="col-3">
                 <h2 class="fw-bold">Renombrar un archivo</h2>
-                <form action="/rename" method="get">
+                <form action="/rename" method="get" id="form-rename">
                     <div class="mb-3">
                         <label for="labelNamefile" class="form-label">Nombre del archivo</label>
-                        <input type="text" class="form-control" name="fileNameRename" aria-describedby="fileName" required>
+                        <input type="text" class="form-control" name="fileNameRename" id="fileName-rename" aria-describedby="fileName" required>
                     </div>
                     <div class="mb-3">
                         <label for="labelNamefileNew" class="form-label">Nuevo nombre del archivo</label>
-                        <input type="text" class="form-control" name="fileNameNew" aria-describedby="fileName" required>
+                        <input type="text" class="form-control" name="fileNameNew" id="fileName-new" aria-describedby="fileName" required>
                     </div>
                     <button type="submit" class="btn btn-warning">Renombrar archivo</button>
                 </form>
@@ -61,10 +61,10 @@
             <!-- Eliminar archivo -->
             <div class="col-3">
                 <h2 class="fw-bold">Eliminar un archivo</h2>
-                <form action="/delete" method="get">
+                <form action="/delete" method="get" id="form-delete">
                     <div class="mb-3">
                         <label for="labelNamefile" class="form-label">Nombre del archivo</label>
-                        <input type="text" class="form-control" name="fileNameDelete" aria-describedby="fileName" required>
+                        <input type="text" class="form-control" name="fileNameDelete" id="fileName-delete" aria-describedby="fileName" required>
                     </div>
                     <button type="submit" class="btn btn-danger text-white">Eliminar archivo</button>
                 </form>

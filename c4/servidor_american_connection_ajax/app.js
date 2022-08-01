@@ -54,7 +54,40 @@ app.get('/read', async (req, res) => {
   }
 });
 
+app.get('/rename', async (req, res) => {
+  const fileNameRename = req.query.fileNameRename;
+  const fileNameNew = req.query.fileNameNew;
+  if (fileNameRename != null && fileNameNew != null) {
+    try {
+      await fs.access('public/documents/' + fileNameRename + '.txt');
+      await fs.rename('public/documents/' + fileNameRename + '.txt', 'public/documents/' + fileNameNew + '.txt');
+      res.send(`Archivo renombrado!\nSu archivo anterior era: ${fileNameRename}.txt \nSu nuevo archivo es: ${fileNameNew}.txt`);
+    } catch (error) {
+      if (error.code === 'ENOENT') {
+        res.send('El archivo no existe');
+      } else {
+        res.send('Error: ' + error);
+      }
+    }
+  } else {
+    res.send('Ingrese los datos');
+  }
+});
 
+app.get('/delete', async (req, res) => {
+  const fileNameDelete = req.query.fileNameDelete;
+  try {
+    await fs.access('public/documents/' + fileNameDelete + '.txt');
+    await fs.unlink('public/documents/' + fileNameDelete + '.txt');
+    res.send(`El archivo ${fileNameDelete}.txt se ha eliminado!`);
+  } catch (error) {
+    if (error.code === 'ENOENT') {
+      res.send('El archivo no existe');
+    } else {
+      res.send('Error: ' + error);
+    }
+  }
+});
 
 app.get('*', (req, res) => {
   res.send('Página aún no implementada')
