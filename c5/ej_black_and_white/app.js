@@ -14,6 +14,7 @@ app.use(express.urlencoded({ extended: true }));
 const key = 123;
 
 app.get('/img-black-white', async (req, res) => {
+    console.log(chalk.underline.bold.white(`Lat: ${req.query.latitude}, Long: ${req.query.longitude}`));
     const allowedExtensions = /(.jpg|.png)$/i;
     if (!allowedExtensions.exec(req.query.image)) {
         res.send('Solo se admiten formatos .jpg y .png')
@@ -42,8 +43,10 @@ async function getRandomPhrase() {
     let phrase;
     try {
         const res_api = await axios.get(`https://anapioficeandfire.com/api/houses/${randomNum}`);
-        if (JSON.stringify(res_api.data.coatOfArms) != "") {
-            phrase = JSON.stringify(res_api.data.coatOfArms);
+        console.log(JSON.stringify(res_api.data.coatOfArms));
+        phrase = JSON.stringify(res_api.data.coatOfArms);
+        if (phrase === "" || phrase === null) {
+            phrase = 'Sin frase';
         }
     } catch (error) {
         console.log(error);
