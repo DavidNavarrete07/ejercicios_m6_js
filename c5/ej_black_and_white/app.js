@@ -25,7 +25,8 @@ app.get('/img-black-white', async (req, res) => {
             image.resize(350, 350)
                 .greyscale()
                 .quality(90)
-                .print(font, 10, 10, `${moment().format('MMMM Do YYYY, h:mm:ss a')}\n ${await getRandomPhrase()}`)
+                .print(font, 10, 10, `${moment().format('MMMM Do YYYY, h:mm:ss')}`)
+                .print(font, 10, 30, `${await getRandomPhrase()}`)
                 .write('public/images/newImg.jpg');
             res.redirect('/images/newImg.jpg');
         } else {
