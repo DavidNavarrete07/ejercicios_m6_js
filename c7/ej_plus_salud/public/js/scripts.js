@@ -1,4 +1,5 @@
-const list = document.querySelector('#list-users')
+const list = document.querySelector('#list-users');
+
 async function getData() {
     let res_api = await fetch('/users');
     res_api = await res_api.json();
